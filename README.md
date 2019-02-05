@@ -4,7 +4,7 @@
 
 This is an implementation of Kawase's light-streak.
 
--[Reference : Frame Buffer Postprocessing Effects in DOUBLE-S.T.E.A.L(Wreckless)](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt)
+- [Frame Buffer Postprocessing Effects in DOUBLE-S.T.E.A.L(Wreckless)](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt)
 
 ## Settings
 
