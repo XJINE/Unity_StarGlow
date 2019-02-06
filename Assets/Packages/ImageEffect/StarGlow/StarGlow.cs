@@ -35,7 +35,7 @@ public class StarGlow : ImageEffectBase
     [Range(0, 10)]
     public float intensity = 1;
 
-    [Range(1, 10)]
+    [Range(1, 20)]
     public int divide = 3;
 
     [Range(1, 5)]
