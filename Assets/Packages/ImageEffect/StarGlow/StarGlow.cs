@@ -91,6 +91,10 @@ public class StarGlow : ImageEffectBase
 
         Graphics.Blit(source, brightnessTex, base.material, 1);
 
+        // DEBUG:
+        // Graphics.Blit(brightnessTex, destination, base.material, 0);
+        // return;
+
         // STEP:2
         // Get blurred brightness image.
 
@@ -107,6 +111,10 @@ public class StarGlow : ImageEffectBase
 
             Graphics.Blit(brightnessTex, blurredTex1, base.material, 2);
 
+            // DEBUG:
+            // Graphics.Blit(blurredTex1, destination, base.material, 0);
+            // return;
+
             for (int i = 2; i <= this.iteration; i++)
             {
                 base.material.SetInt(this.idIteration, i);
@@ -119,7 +127,15 @@ public class StarGlow : ImageEffectBase
             }
 
             Graphics.Blit(blurredTex1, compositeTex, base.material, 3);
+
+            // DEBUG:
+            // Graphics.Blit(compositeTex, destination, base.material, 0);
+            // return;
         }
+
+        // DEBUG:
+        // Graphics.Blit(compositeTex, destination, base.material, 0);
+        // return;
 
         // STEP:3
         // Composite.

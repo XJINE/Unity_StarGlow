@@ -128,8 +128,7 @@
 
             fixed4 frag(v2f_img input) : SV_Target
             {
-                float4 color = tex2D(_MainTex, input.uv);
-                return color;
+                return tex2D(_MainTex, input.uv);
             }
 
             ENDCG
