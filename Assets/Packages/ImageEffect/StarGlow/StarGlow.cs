@@ -102,7 +102,7 @@ public class StarGlow : ImageEffectBase
 
         for (int x = 1; x <= this.numOfStreak; x++)
         {
-            Vector2 offset = 
+            Vector2 offset =
             (Quaternion.AngleAxis(angle * x + this.angleOfStreak, Vector3.forward) * Vector2.down).normalized;
 
             base.material.SetVector(this.idOffset, offset);
@@ -121,16 +121,16 @@ public class StarGlow : ImageEffectBase
 
                 Graphics.Blit(blurredTex1, blurredTex2, base.material, 2);
 
+                // DEBUG:
+                // Graphics.Blit(blurredTex2, destination, base.material, 0);
+                // return;
+
                 RenderTexture temp = blurredTex1;
                 blurredTex1 = blurredTex2;
                 blurredTex2 = temp;
             }
 
             Graphics.Blit(blurredTex1, compositeTex, base.material, 3);
-
-            // DEBUG:
-            // Graphics.Blit(compositeTex, destination, base.material, 0);
-            // return;
         }
 
         // DEBUG:
