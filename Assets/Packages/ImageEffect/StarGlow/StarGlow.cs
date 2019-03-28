@@ -139,7 +139,6 @@ public class StarGlow : ImageEffectBase
         RenderTexture.ReleaseTemporary(blurredTex1);
         RenderTexture.ReleaseTemporary(blurredTex2);
         RenderTexture.ReleaseTemporary(compositeTex);
-
     }
 
     #endregion Method
