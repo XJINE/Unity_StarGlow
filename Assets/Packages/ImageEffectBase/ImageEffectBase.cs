@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
+[ExecuteAlways]
 [RequireComponent(typeof(Camera))]
 public class ImageEffectBase : MonoBehaviour
 {
@@ -14,8 +14,7 @@ public class ImageEffectBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        if (!SystemInfo.supportsImageEffects
-         || !this.material
+        if (!this.material
          || !this.material.shader.isSupported)
         {
             base.enabled = false;

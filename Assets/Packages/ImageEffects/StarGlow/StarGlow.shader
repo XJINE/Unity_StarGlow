@@ -104,7 +104,7 @@
 
                 for (int j = 0; j < 4; j++)
                 {
-                    color += saturate(tex2D(_MainTex, uv) * pow(ATTENUATION, input.power * j));
+                    color += tex2D(_MainTex, uv) * pow(ATTENUATION, input.power * j);
                     uv += input.offset;
                 }
 
@@ -119,7 +119,7 @@
 
         Pass
         {
-            Blend OneMinusDstColor One
+            Blend One One
 
             CGPROGRAM
 
@@ -155,8 +155,7 @@
 
                 #if defined(_COMPOSITE_TYPE_COLORED_ADDITIVE) || defined(_COMPOSITE_TYPE_COLORED_SCREEN)
 
-                compositeColor.rgb = (compositeColor.r + compositeColor.g + compositeColor.b)
-                                    * 0.3333 * _CompositeColor;
+                compositeColor.rgb = (compositeColor.r + compositeColor.g + compositeColor.b) * 0.3333 * _CompositeColor;
 
                 #endif
 

@@ -29,34 +29,21 @@ public class StarGlow : ImageEffectBase
 
     public StarGlow.CompositeType compositeType = StarGlow.CompositeType._COMPOSITE_TYPE_ADDITIVE;
 
-    [Range(0, 1)]
-    public float threshold = 1;
-
-    [Range(0, 10)]
-    public float intensity = 1;
-
-    [Range(1, 20)]
-    public int divide = 3;
-
-    [Range(1, 5)]
-    public int iteration = 5;
-
-    [Range(0, 1)]
-    public float attenuation = 1;
-
-    [Range(0, 360)]
-    public float angleOfStreak = 0;
-
-    [Range(1, 16)]
-    public int numOfStreak = 4;
+    [Range(0,  10)] public float threshold     = 1;
+    [Range(0,  10)] public float intensity     = 1;
+    [Range(1,  20)] public int   divide        = 3;
+    [Range(1,   5)] public int   iteration     = 5;
+    [Range(0,   1)] public float attenuation   = 1;
+    [Range(0, 360)] public float angleOfStreak = 0;
+    [Range(1,  16)] public int   numOfStreak   = 4;
 
     public Color color = Color.white;
 
     private int idCompositeTex   = 0;
     private int idCompositeColor = 0;
-    private int idParameter  = 0;
-    private int idIteration  = 0;
-    private int idOffset     = 0;
+    private int idParameter      = 0;
+    private int idIteration      = 0;
+    private int idOffset         = 0;
 
     #endregion Field
 
